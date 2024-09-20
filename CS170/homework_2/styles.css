@@ -1,0 +1,66 @@
+body {
+    background-image: url("https://www.shutterstock.com/shutterstock/videos/3428636543/thumb/1.jpg?ip=x480");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(24, 2, 26);
+}
+
+.letter {
+    background-color: #520e6f;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    min-width: 850px;
+}
+
+.letterhead {
+    text-align: center;
+    font-family: Impact;
+    font-size: 50px;
+    padding-top: 1px;
+    line-height: 15px;
+    font-style: italic;
+}
+
+.letterbody {
+    background-color: #520e6f;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    line-height: 40px;
+    text-align: center;
+    font-family: Impact;
+    font-size: 35px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.map {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 50px;
+    font-family: Impact;
+    line-height: 20%;
+    padding-bottom: 50px;
+}
+
+footer {
+    text-align: center;
+    font-family: Impact;
+    font-size: 20px;
+    line-height: 5px;
+    margin-top: 10px;
+    padding: 1px;
+    background-color: #3b0a50;
+    color: rgb(24, 2, 26);
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 850px;
+}
