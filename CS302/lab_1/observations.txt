@@ -1,0 +1,14 @@
+==========================
+CS302: Lab 1 Observations
+==========================
+
+Please add your name here:
+
+===========================
+Observations about MCSS
+===========================
+
+Please write down a few sentences recording your observations about the
+runtime behavior of each algorithm as the size of the input array
+increases. You should reflect on our theoretical asymptotic analysis of
+each algorithm and how that shows up in each of the plots.

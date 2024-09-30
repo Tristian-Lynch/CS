@@ -1,0 +1,73 @@
+import random
+
+def brute_force_mcss(seq):
+    """
+    Compute the maximum contiguous subsequence sum of a sequence of length n
+    using the naive brute force algorithm.
+
+    @param seq:     The sequence in question
+
+    @return the maximum contiguous subsequence sum over seq.
+    """
+    # TODO: Add your solution here
+    raise NotImplementYet
+
+def better_brute_force_mcss(seq):
+    """
+    Compute the maximum contiguous subsequence sum of a sequence of length n
+    using the slightly improved naive brute force algorithm.
+
+    @param seq:     The sequence in question
+
+    @return the maximum contiguous subsequence sum over seq.
+    """
+    # TODO: Add your solution here
+    raise NotImplementYet
+
+def linear_mcss(seq):
+    """
+    Compute the maximum contiguous subsequence sum of a sequence of length n
+    using the linear algorithm.
+
+    @param seq:     The sequence in question
+
+    @return the maximum contiguous subsequence sum over seq.
+    """
+    # TODO: Add your solution here
+    raise NotImplementYet
+
+
+########################################################
+# Helper functions
+########################################################
+def get_random_list(n):
+    """
+    Generate a random list of integers between -10000 and 10000.
+
+    @param n:       The number of elements in the list to be generated.
+
+    @warning This does not seed the random number generator, so don't expect
+        true randomness.
+
+    @return the randomly generated list.
+    """
+    return [random.randint(-10000, 10000) for i in range(n)]
+
+class NotImplementYet(Exception):
+    """
+    Indicates that you have not yet implemented this method.
+    """
+    pass
+
+
+if __name__ == '__main__':
+    seq = get_random_list(10)
+    bf_mcss_val = brute_force_mcss(seq)
+    bbf_mcss_val = better_brute_force_mcss(seq)
+    ln_mcsss_val = linear_mcss(seq)
+
+    print(seq)
+    print(f"Naive brute force computed a result of {bf_mcss_val}")
+    print(f"Better brute foce computed a result of {bbf_mcss_val}")
+    print(f"Linear computed a result of {ln_mcsss_val}")
+
