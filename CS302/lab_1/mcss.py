@@ -1,5 +1,6 @@
 import random
 
+
 def brute_force_mcss(seq):
     """
     Compute the maximum contiguous subsequence sum of a sequence of length n
@@ -9,8 +10,18 @@ def brute_force_mcss(seq):
 
     @return the maximum contiguous subsequence sum over seq.
     """
-    # TODO: Add your solution here
-    raise NotImplementYet
+
+    sum = 0
+    max_sum = 0
+    for i in range(len(seq)):
+        for j in range(i, len(seq)):
+            for k in range(i, j + 1):
+                sum = sum + seq[k]
+            if sum > max_sum:
+                max_sum = sum
+            sum = 0
+    return max_sum
+
 
 def better_brute_force_mcss(seq):
     """
@@ -21,8 +32,17 @@ def better_brute_force_mcss(seq):
 
     @return the maximum contiguous subsequence sum over seq.
     """
-    # TODO: Add your solution here
-    raise NotImplementYet
+
+    max_sum = 0
+    sum = 0
+    for i in range(len(seq)):
+        for j in range(i, len(seq)):
+            sum += seq[j]
+            if sum > max_sum:
+                max_sum = sum
+        sum = 0
+    return max_sum
+
 
 def linear_mcss(seq):
     """
@@ -33,8 +53,16 @@ def linear_mcss(seq):
 
     @return the maximum contiguous subsequence sum over seq.
     """
-    # TODO: Add your solution here
-    raise NotImplementYet
+
+    max_sum = 0
+    running_sum = 0
+    for i in range(len(seq)):
+        running_sum += seq[i]
+        if running_sum > max_sum:
+            max_sum = running_sum
+        elif running_sum < 0:
+            running_sum = 0
+    return max_sum
 
 
 ########################################################
@@ -53,14 +81,16 @@ def get_random_list(n):
     """
     return [random.randint(-10000, 10000) for i in range(n)]
 
+
 class NotImplementYet(Exception):
     """
     Indicates that you have not yet implemented this method.
     """
+
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     seq = get_random_list(10)
     bf_mcss_val = brute_force_mcss(seq)
     bbf_mcss_val = better_brute_force_mcss(seq)
@@ -70,4 +100,3 @@ if __name__ == '__main__':
     print(f"Naive brute force computed a result of {bf_mcss_val}")
     print(f"Better brute foce computed a result of {bbf_mcss_val}")
     print(f"Linear computed a result of {ln_mcsss_val}")
-
