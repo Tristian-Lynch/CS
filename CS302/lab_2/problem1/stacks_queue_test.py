@@ -9,9 +9,10 @@ underlying data structure to hold the elements.
 @Date: Oct 10, 2024
 """
 
-from stacks_queue import QueueFromStacks
 import unittest
+
 import exceptions
+from stacks_queue import QueueFromStacks
 
 
 class QueueFromStacksTest(unittest.TestCase):
@@ -98,26 +99,23 @@ class QueueFromStacksTest(unittest.TestCase):
         self.queue.enqueue(4)
         self.queue.enqueue(-1)
         self.queue.enqueue(-2)
+        print(str(self.queue))
 
         # test shape after enqueueing everything.
-        self.assertEqual(str(self.queue),
-                         "[1, 2, 4, -1, -2]")
+        self.assertEqual(str(self.queue), "[1, 2, 4, -1, -2]")
 
         # test removing one element, then adding another
         self.queue.dequeue()
-        self.assertEqual(str(self.queue),
-                         "[2, 4, -1, -2]")
+        self.assertEqual(str(self.queue), "[2, 4, -1, -2]")
         self.queue.enqueue("hello")
-        self.assertEqual(str(self.queue),
-                         "[2, 4, -1, -2, 'hello']")
+        self.assertEqual(str(self.queue), "[2, 4, -1, -2, 'hello']")
 
         # remove two elements and make sure they are replaced!
         self.queue.dequeue()
         self.queue.dequeue()
         self.queue.enqueue(-9)
         self.queue.enqueue(100)
-        self.assertEqual(str(self.queue),
-                         "[-1, -2, 'hello', -9, 100]")
+        self.assertEqual(str(self.queue), "[-1, -2, 'hello', -9, 100]")
 
         # make some sanity checks
         self.assertEqual(self.queue.peek(), -1)
@@ -129,5 +127,5 @@ class QueueFromStacksTest(unittest.TestCase):
         self.assertEqual(self.queue.get_size(), 0)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main(verbosity=2, exit=False)

@@ -9,10 +9,11 @@ structure to hold the elements.
 @Date: ADD THE DATE WHEN YOU START HERE
 """
 
+from typing import override
+
+from exceptions import MethodNotImplemented, QueueIsEmpty
 from iqueue import IQueue
 from stack import Stack
-from exceptions import MethodNotImplemented, QueueFullError, QueueIsEmpty
-from typing import override
 
 
 class QueueFromStacks(IQueue):
@@ -34,8 +35,8 @@ class QueueFromStacks(IQueue):
         super().__init__()
         self.capacity = capacity
 
-        # TODO: Initialize two stacks using the Stack data structure provided
-        #       in `stack.py`
+        self.s1 = Stack()
+        self.s2 = Stack()
 
     @override
     def enqueue(self, item: object):
@@ -53,10 +54,8 @@ class QueueFromStacks(IQueue):
             QueueFullError: If the queue is full and we cannot add the item.
         """
         # TODO: Add the item to the tail end of the queue.
-        #
-        #   Warning: The tail is not necessarily the element at the last index
-        #       of the queue, recall that we are using a circular array.
-        raise MethodNotImplemented
+        
+        self.s1.push(item)
 
     @override
     def dequeue(self) -> object:
@@ -69,10 +68,9 @@ class QueueFromStacks(IQueue):
             MethodNotImplemented: If the method is not implemented.
             QueueIsEmpty: If the queue is empty and there's nothing to dequeue.
         """
-        # TODO: Remove the top element from the queue and return it.
-        #   Your implementation MUST raise the QueueIsEmpty exception if there
-        #   are no elements in the queue to be dequeued.
-        raise MethodNotImplemented
+        if self.s1.is_empty():
+            raise QueueIsEmpty
+        return self.s1.pop()
 
     @override
     def peek(self) -> object:
@@ -85,13 +83,12 @@ class QueueFromStacks(IQueue):
             MethodNotImplemented: If the method is not implemented.
             QueueIsEmpty: If the queue is empty and there's nothing to peek at.
         """
-        # TODO: Peek at top element from the queue. This is essentially the
-        #   same as dequeue except that we do NOT remove the element from the
-        #   queue.
-        #
-        #   Your implementation MUST raise the QueueIsEmpty exception if there
-        #   are no elements in the queue to be dequeued.
-        raise MethodNotImplemented
+        if self.s2.is_empty():
+            while not self.s1.is_empty():
+                self.s2.push(self.s1.pop())
+        if self.s2.is_empty():
+            raise QueueIsEmpty("Queue is empty. Cannot peek.")
+        return self.s2.peek()
 
     def __str__(self):
         """Returns a string representation of the queue.
@@ -135,6 +132,18 @@ class QueueFromStacks(IQueue):
             str: A string representatino of the queue that meets the above
                 specifications.
         """
-        # TODO: Add you implementation for building the string representation
-        #       of the qeue from stacks.
-        raise MethodNotImplemented
+        temp_stack = Stack()
+        items = []
+
+        # Transfer items from s1 to temp_stack and collect them in a list
+        while not self.s1.is_empty():
+            item = self.s1.pop()
+            items.append(item)
+            temp_stack.push(item)
+
+        # Restore the original stack s1
+        while not temp_stack.is_empty():
+            self.s1.push(temp_stack.pop())
+
+        # The items list now contains the queue elements from head to tail
+        return "[" + ", ".join(repr(item) for item in items) + "]"

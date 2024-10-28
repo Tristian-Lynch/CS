@@ -2,7 +2,7 @@
 CS302: Lab 2 Problem 3
 ==========================
 
-Please add your name here:
+Please add your name here: Tristian Lynch
 
 ==================================
 Analysis of Queue implementations
@@ -17,27 +17,25 @@ Analysis of Queue implementations
 
    1.1 Worst case asymptotic runtime for enqueue for a circular array queue:
    -------------------------------------------------------------------------
-
-
-
+   The worst case for the cicular array for adding an element to the array is
+   Constant time o(1). We know where the tail is located at all times and 
+   accessing an index of an array is constant time.
 
    1.2 Worst case asymptotic runtime for dequeue for a circular array queue:
    -------------------------------------------------------------------------
-
-
-
+   The worst case for the circular array when dequeue'ing is also constant time,
+   We are just reassigning the value of the head to the next item in the queue.
 
    1.3 Worst case asymptotic runtime for enqueue for a two stacks queue:
    -------------------------------------------------------------------------
-
-
-
-
+   The worst case for two stack method, which I was having issues implementing
+   with your given stack structure, Appologize i was in a hurry for this assignment,
+   Is O(N). We have to iterate through the stack twice in order to add it to the bottom of
+   the stack as we move all items from one stack to the other, add it to the bottom, then add everything else back.
    1.4 Worst case asymptotic runtime for dequeue for a two stacks queue:
    -------------------------------------------------------------------------
-
-
-
+   dequeing however is more simple as we can just pop from the top of the stack. Giving
+   us a runtime of O(1).
 
 =====================================================================================
 
@@ -55,8 +53,21 @@ Analysis of Queue implementations
    | analyze it!                                                                  |
    +------------------------------------------------------------------------------+
 
+   Growing the circular array by doubling the size of it everytime the array gets full,
+   would be the ideal solution in my mind. The amortized time complexity over the long term
+   when we have to double the size of the array still gives us a constant time, like we went
+   over in class. Each time it has to double the size, it is O(n), however as the array grows
+   we double less and less often. 
 
+   When we do double the size of the array, we would start at the head of the existing,
+   adding all of the elements from the old circular list, and then adding None values for the rest.
 
+   We could also consider adding a way to reduce the size of the array to say if it drops to a certain
+   size below the larger in order to save memory. If the array blows up in size once, then drops down 
+   and never grows that large again, we can save memory by then reducing the size of the array.
+
+   This will give us constant times for enqueue and dequeue, as well as give us a amortized runtime
+   of constant time for increasing the size of our queue.
 
 
 

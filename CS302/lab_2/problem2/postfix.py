@@ -11,7 +11,7 @@ to validate and evaluate arithmetic expressions written in postfix notation.
     and CS302 class requirements.
 """
 
-from exceptions import MethodNotImplemented, MalformedExpression
+from exceptions import MalformedExpression
 from stack import Stack
 
 
@@ -32,7 +32,7 @@ class PostfixEvaluator:
             "-": lambda x, y: x - y,
             "*": lambda x, y: x * y,
             "/": lambda x, y: x // y,
-            "^": lambda x, y: x ** y,
+            "^": lambda x, y: x**y,
         }
 
     def is_allowed_operator(self, op: str) -> bool:
@@ -47,7 +47,7 @@ class PostfixEvaluator:
         Returns: True if the operator is allowed, False otherwise.
 
         """
-        if op not in ['+', '-', '/', '*', '^']:
+        if op not in ["+", "-", "/", "*", "^"]:
             return False
         return True
 
@@ -91,4 +91,39 @@ class PostfixEvaluator:
         Returns:
             int: The result of the evaluation of the full expression.
         """
-        raise MethodNotImplemented
+        stack = Stack()
+        tokens = expression.strip().split()
+
+        try:
+            for token in tokens:
+                try:
+                    # Check if the token is an integer.
+                    value = int(token)
+                    stack.push(value)
+                except ValueError:
+                    # Not an integer, check if it's an operator, if not raise exception.
+                    if self.is_allowed_operator(token):
+                        # token is an operator
+                        # Check if there are enough operands and values
+                        if stack.get_size() < 2:
+                            raise MalformedExpression
+                        y = stack.pop()
+                        x = stack.pop()
+                        try:
+                            result = self.allowed_operators[token](x, y)
+                        except ZeroDivisionError:
+                            raise MalformedExpression
+                        stack.push(result)
+                    else:
+                        # Invalid token
+                        raise MalformedExpression
+
+            if stack.get_size() != 1:
+                raise MalformedExpression
+
+            result = stack.pop()
+            self.parsed_expressions += 1
+            return result
+
+        except Exception:
+            raise MalformedExpression
