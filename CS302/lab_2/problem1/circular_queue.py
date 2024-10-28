@@ -5,13 +5,14 @@ This module defines the CircularArrayQueue, which is subclass of Queue. This
 essentially implements a queue using a circular array as the underlying data
 structure to hold the elements.
 
-@Author: ADD YOUR NAME HERE (ADD YOUR EMAIL HERE)
-@Date: ADD THE DATE WHEN YOU START HERE
+@Author: Tristian Lynch (tlynch7@sycamores.indstate.edu)
+@Date: 10/27/2024
 """
 
-from iqueue import IQueue
-from exceptions import MethodNotImplemented, QueueFullError, QueueIsEmpty
 from typing import override
+
+from exceptions import QueueFullError, QueueIsEmpty
+from iqueue import IQueue
 
 
 class CircularArrayQueue(IQueue):
@@ -32,10 +33,11 @@ class CircularArrayQueue(IQueue):
         """
         super().__init__()
         self.capacity = capacity
-
-        # TODO: Initialize a list with a maximum capacity of self.capacity.
-        #       Note that you can initialize the list with None objects since
-        #       our queue can be used to hold things of any type.
+        self.list = [None] * self.capacity
+        self.is_full = False
+        self.size = 0
+        self.head = 0
+        self.tail = 0
 
     @override
     def enqueue(self, item: object):
@@ -59,7 +61,18 @@ class CircularArrayQueue(IQueue):
         #
         #   Warning: The tail is not necessarily the element at the last index
         #       of the queue, recall that we are using a circular array.
-        raise MethodNotImplemented
+        if self.is_full:
+            raise QueueFullError
+        if self.size == 0:
+            self.list[self.head] = item
+            self.size += 1
+            self.tail = (self.tail + 1) % self.capacity
+        else:
+            self.list[self.tail] = item
+            self.size += 1
+            self.tail = (self.tail + 1) % self.capacity
+        if self.size == self.capacity:
+            self.is_full = True
 
     @override
     def dequeue(self) -> object:
@@ -75,7 +88,13 @@ class CircularArrayQueue(IQueue):
         # TODO: Remove the top element from the queue and return it.
         #   Your implementation MUST raise the QueueIsEmpty exception if there
         #   are no elements in the queue to be dequeued.
-        raise MethodNotImplemented
+        if self.is_empty():
+            raise QueueIsEmpty
+        if self.is_full:
+            self.is_full = False
+        self.head = (self.head + 1) % self.capacity
+        self.size -= 1
+        return self.list[self.head - 1]
 
     @override
     def peek(self) -> object:
@@ -94,7 +113,9 @@ class CircularArrayQueue(IQueue):
         #
         #   Your implementation MUST raise the QueueIsEmpty exception if there
         #   are no elements in the queue to be dequeued.
-        raise MethodNotImplemented
+        if self.size == 0:
+            raise QueueIsEmpty
+        return self.list[self.head]
 
     def __str__(self):
         """Returns a string representation of the queue.
@@ -134,7 +155,4 @@ class CircularArrayQueue(IQueue):
             str: A string representation of the queue that meets the above
                 specifications.
         """
-        # TODO: Add you implementation for representing the inner array as a
-        #   string. Note that if you use the List type in python, this should
-        #   be a simple one liner.
-        raise MethodNotImplemented
+        return str(self.list)
