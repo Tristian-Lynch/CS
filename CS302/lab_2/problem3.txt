@@ -1,0 +1,87 @@
+==========================
+CS302: Lab 2 Problem 3
+==========================
+
+Please add your name here:
+
+==================================
+Analysis of Queue implementations
+==================================
+
+1. Consider a case where our queue contains N elements, describe the worst case
+   asymptotic runtime of each of your implementations (the circular queue and
+   the two stacks).
+
+   You may assume that the queue has enough room to enqueue a new element,
+   i.e., we have room to add an (N+1)'th element to the queue.
+
+   1.1 Worst case asymptotic runtime for enqueue for a circular array queue:
+   -------------------------------------------------------------------------
+
+
+
+
+   1.2 Worst case asymptotic runtime for dequeue for a circular array queue:
+   -------------------------------------------------------------------------
+
+
+
+
+   1.3 Worst case asymptotic runtime for enqueue for a two stacks queue:
+   -------------------------------------------------------------------------
+
+
+
+
+   1.4 Worst case asymptotic runtime for dequeue for a two stacks queue:
+   -------------------------------------------------------------------------
+
+
+
+
+=====================================================================================
+
+2. +------------------------------------------------------------------------------+
+   | Consider instead of using a circular array of fixed size (as in problem 1),  |
+   | we would like to use a dynamically growable array (like the one we discussed |
+   | in class). Describe how would that change your implementation and how would  |
+   | the asymptotic runtime be impacted?                                          |
+   |                                                                              |
+   | _Hint_: This is a bit open-ended because there are many ways to implement    |
+   | it. For example, do you still want the array to be circular? If not, how to  |
+   | you dequeue an element? If yes, what happens when you need to double the     |
+   | size of the array?                                                           |
+   | You should pick the implementation that makes more sense to you and then     |
+   | analyze it!                                                                  |
+   +------------------------------------------------------------------------------+
+
+
+
+
+
+
+
+
+
+
+
+=====================================================================================
+
+3. +-----------------------------------------------------------------------------+
+   | Consider of well-formed postfix expression containing N symbols. What would |
+   | be the asymptotic runtime of the algorithm you designed to evaluate such an |
+   | expression?                                                                 |
+   |                                                                             |
+   | Note that you may assume that ALL stack operations are O(1).                |
+   +-----------------------------------------------------------------------------+
+
+
+
+
+
+
+
+
+
+
+=====================================================================================
