@@ -1,0 +1,21 @@
+==========================
+CS302: Lab 1 Observations
+==========================
+
+Please add your name here: Tristian Lynch
+
+===========================
+Observations about MCSS
+===========================
+
+Please write down a few sentences recording your observations about the
+runtime behavior of each algorithm as the size of the input array
+increases. You should reflect on our theoretical asymptotic analysis of
+each algorithm and how that shows up in each of the plots.
+
+When Running the racing.py program the brute force alogorithm is increadibly slow. 
+Taking roughly 12 seconds to execute with an N value of 850. This algorithm would not
+be ideal in any situation. This is easily approved upon by the better brute force
+algorithm that runs increadibly faster than the naive approach. 
+
+The linear approach if however obviously surperior taking exponentially less time to run.
