@@ -35,9 +35,9 @@ Hello! I'm a senior at Indiana State University with a passion for programming a
 
 ## 📈 Connect with Me
 
-- **GitHub**: [Your GitHub Profile URL]
-- **LinkedIn**: [Your LinkedIn URL, if you have one]
-- **Email**: [Your Email Address]
+- **GitHub**: [https://github.com/Tristian-Lynch]
+- **LinkedIn**: [https://www.linkedin.com/in/tristian-lynch/]
+- **Email**: [tristianlynch@gmail.com]
 
 Thank you for stopping by, and feel free to check out my work or leave feedback!
 
