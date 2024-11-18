@@ -1,0 +1,73 @@
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+p {
+    text-align: center;
+}
+
+h1 {
+    font-size: 48px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+.description {
+    color: rgb(147, 147, 147);
+}
+
+.features {
+    font-size: 20px;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+}
+
+.feature-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sign-up-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    font-size: 18px;
+    padding: 15px 40px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Media query for smaller screens */
+@media (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}

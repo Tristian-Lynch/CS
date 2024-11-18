@@ -4,6 +4,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Post 2024 Election</title>
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
         <header></header>
@@ -11,42 +12,75 @@
             <!-- Main content goes here -->
             <h1 id="title">Post 2024 Election</h1>
             <p id="description">
-                After the 2024 Election, lets here some of your thoughts...(this
-                was written prior to the closing of the poles so official
-                results are not in context.)
+                After the 2024 Election, let's hear some of your thoughts...
             </p>
-            <form id="survey-form">
-                <label id="name-label"
-                    >Name: <input id="name" placeholder="John Doe" required
-                /></label>
-                <label id="email-label"
-                    >Email:
-                    <input
-                        id="email"
-                        type="email"
-                        placeholder="johndoe@email.com"
-                        required
-                /></label>
-                <label id="number-label"
-                    >Age:
-                    <input
-                        id="number"
-                        type="number"
-                        min="1"
-                        max="125"
-                        placeholder="18"
-                        value="18"
-                        required
-                /></label>
-                <select id="dropdown">
-                    <option selected value="">Who did you vote for?</option>
-                    <option value="1">Donald Trump</option>
-                    <option value="2">Kamala Harris</option>
-                    <option value="3">RFK Jr.</option>
-                    <option value="4">Other</option>
-                </select>
-                <input type="submit" value="Submit" />
-            </form>
+            <div class="container">
+                <form id="survey-form">
+                    <label id="name-label"
+                        >Name: <input id="name" placeholder="John Doe" required
+                    /></label>
+                    <label id="email-label"
+                        >Email:
+                        <input
+                            id="email"
+                            type="email"
+                            placeholder="johndoe@email.com"
+                            required
+                    /></label>
+                    <label id="number-label"
+                        >Age:
+                        <input
+                            id="number"
+                            type="number"
+                            min="1"
+                            max="125"
+                            placeholder="18"
+                            value="18"
+                            required
+                    /></label>
+                    <select id="dropdown">
+                        <option selected value="">Who did you vote for?</option>
+                        <option value="1">Donald Trump</option>
+                        <option value="2">Kamala Harris</option>
+                        <option value="3">RFK Jr.</option>
+                        <option value="4">Other</option>
+                        <option value="5">Rather Not Share</option>
+                    </select>
+                    <div id="voting-method">
+                        <label>How Did you vote?</label>
+                        <input
+                            type="radio"
+                            name="voting-method"
+                            value="In-Person"
+                        />
+                        In-Person
+                        <input
+                            type="radio"
+                            name="voting-method"
+                            value="Mail-In"
+                        />
+                        Mail-In
+                    </div>
+                    <div id="engagement">
+                        <label>You felt engaged in the election:</label>
+                        <input type="checkbox" name="engagement" value="Yes" />
+                        <label
+                            >You actively engaged in sharing social media posts
+                            prior to election day:</label
+                        >
+                        <input type="checkbox" name="engagement" value="No" />
+                    </div>
+                    <label id="comments-label"
+                        >Any comments or any other thoughts you would like to
+                        share regarding the election?
+                        <textarea
+                            id="comments"
+                            placeholder="Enter your comments here..."
+                        ></textarea>
+                    </label>
+                    <input type="submit" id="submit" value="Submit" />
+                </form>
+            </div>
         </main>
         <footer>
             <p>&copy; 2024 Tristian Lynch</p>
