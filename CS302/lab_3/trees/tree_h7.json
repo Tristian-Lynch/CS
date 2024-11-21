@@ -1,0 +1,444 @@
+{
+  "tree_name": "height_7_tree",
+  "arity": 2,
+  "nodes": [
+    {
+      "data": 0,
+      "children": [
+        {
+          "data": 1,
+          "children": [
+            {
+              "data": 3,
+              "children": [
+                {
+                  "data": 7,
+                  "children": [
+                    {
+                      "data": 15,
+                      "children": [
+                        {
+                          "data": 31,
+                          "children": [
+                            {
+                              "data": 63,
+                              "children": [
+                                {
+                                  "data": 127,
+                                  "children": []
+                                },
+                                {
+                                  "data": 128,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 64,
+                              "children": [
+                                {
+                                  "data": 129,
+                                  "children": []
+                                },
+                                {
+                                  "data": 130,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "data": 32,
+                          "children": [
+                            {
+                              "data": 65,
+                              "children": [
+                                {
+                                  "data": 131,
+                                  "children": []
+                                },
+                                {
+                                  "data": 132,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 66,
+                              "children": [
+                                {
+                                  "data": 133,
+                                  "children": []
+                                },
+                                {
+                                  "data": 134,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "data": 16,
+                      "children": [
+                        {
+                          "data": 33,
+                          "children": [
+                            {
+                              "data": 67,
+                              "children": [
+                                {
+                                  "data": 135,
+                                  "children": []
+                                },
+                                {
+                                  "data": 136,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 68,
+                              "children": [
+                                {
+                                  "data": 137,
+                                  "children": []
+                                },
+                                {
+                                  "data": 138,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "data": 34,
+                          "children": [
+                            {
+                              "data": 69,
+                              "children": [
+                                {
+                                  "data": 139,
+                                  "children": []
+                                },
+                                {
+                                  "data": 140,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 70,
+                              "children": [
+                                {
+                                  "data": 141,
+                                  "children": []
+                                },
+                                {
+                                  "data": 142,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "data": 8,
+                  "children": [
+                    {
+                      "data": 17,
+                      "children": [
+                        {
+                          "data": 35,
+                          "children": [
+                            {
+                              "data": 71,
+                              "children": [
+                                {
+                                  "data": 143,
+                                  "children": []
+                                },
+                                {
+                                  "data": 144,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 72,
+                              "children": [
+                                {
+                                  "data": 145,
+                                  "children": []
+                                },
+                                {
+                                  "data": 146,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "data": 36,
+                          "children": [
+                            {
+                              "data": 73,
+                              "children": [
+                                {
+                                  "data": 147,
+                                  "children": []
+                                },
+                                {
+                                  "data": 148,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 74,
+                              "children": [
+                                {
+                                  "data": 149,
+                                  "children": []
+                                },
+                                {
+                                  "data": 150,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "data": 18,
+                      "children": [
+                        {
+                          "data": 37,
+                          "children": [
+                            {
+                              "data": 75,
+                              "children": [
+                                {
+                                  "data": 151,
+                                  "children": []
+                                },
+                                {
+                                  "data": 152,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 76,
+                              "children": [
+                                {
+                                  "data": 153,
+                                  "children": []
+                                },
+                                {
+                                  "data": 154,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "data": 38,
+                          "children": [
+                            {
+                              "data": 77,
+                              "children": [
+                                {
+                                  "data": 155,
+                                  "children": []
+                                },
+                                {
+                                  "data": 156,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 78,
+                              "children": [
+                                {
+                                  "data": 157,
+                                  "children": []
+                                },
+                                {
+                                  "data": 158,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "data": 4,
+              "children": [
+                {
+                  "data": 9,
+                  "children": [
+                    {
+                      "data": 19,
+                      "children": [
+                        {
+                          "data": 39,
+                          "children": [
+                            {
+                              "data": 79,
+                              "children": [
+                                {
+                                  "data": 159,
+                                  "children": []
+                                },
+                                {
+                                  "data": 160,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 80,
+                              "children": [
+                                {
+                                  "data": 161,
+                                  "children": []
+                                },
+                                {
+                                  "data": 162,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "data": 40,
+                          "children": [
+                            {
+                              "data": 81,
+                              "children": [
+                                {
+                                  "data": 163,
+                                  "children": []
+                                },
+                                {
+                                  "data": 164,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 82,
+                              "children": [
+                                {
+                                  "data": 165,
+                                  "children": []
+                                },
+                                {
+                                  "data": 166,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "data": 20,
+                      "children": [
+                        {
+                          "data": 41,
+                          "children": [
+                            {
+                              "data": 83,
+                              "children": [
+                                {
+                                  "data": 167,
+                                  "children": []
+                                },
+                                {
+                                  "data": 168,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 84,
+                              "children": [
+                                {
+                                  "data": 169,
+                                  "children": []
+                                },
+                                {
+                                  "data": 170,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        },
+                        {
+                          "data": 42,
+                          "children": [
+                            {
+                              "data": 85,
+                              "children": [
+                                {
+                                  "data": 171,
+                                  "children": []
+                                },
+                                {
+                                  "data": 172,
+                                  "children": []
+                                }
+                              ]
+                            },
+                            {
+                              "data": 86,
+                              "children": [
+                                {
+                                  "data": 173,
+                                  "children": []
+                                },
+                                {
+                                  "data": 174,
+                                  "children": []
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

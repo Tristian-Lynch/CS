@@ -1,0 +1,15 @@
+==========================
+CS302: Lab 3 Problem 3
+==========================
+
+Please add your name here:
+
+==================================
+Analysis of Search Property Check
+==================================
+
++-------------------------------------------------------------------------------+
+| Please write down what you think is the asymptotic runtime of your proposed   |
+| solution in step 3.1. You don't have to prove it, simply state it with a      |
+| brief rationale.                                                              |
++-------------------------------------------------------------------------------+
