@@ -2,7 +2,7 @@
 CS302: Lab 3 Problem 3
 ==========================
 
-Please add your name here:
+Please add your name here: Tristian Lynch
 
 ==================================
 Analysis of Search Property Check
@@ -13,3 +13,13 @@ Analysis of Search Property Check
 | solution in step 3.1. You don't have to prove it, simply state it with a      |
 | brief rationale.                                                              |
 +-------------------------------------------------------------------------------+
+
+For checking if a tree has the search property, this means that for each node, 
+the value in the left subtree is less than the value of the node, and the value in the right is greater.
+
+I am implementing this by checking if each value of the left child is less than the parent, 
+and the right is greater. If this is never the case, return false, 
+if we reach the bottom null nodes without encountering this return true. 
+
+Since we are traversing the entire tree checking each nodes children, I believe We
+will have a O(n) runtime where n is the size of the tree.

@@ -12,13 +12,14 @@ contain integers as their data.
     and CS302 class requirements.
 """
 
-from sys import maxsize
 
-from node import Node, null
-from binary_node import BinaryNode
-from tree import Tree
+from sys import maxsize
 from typing import override
+
 import exceptions
+from binary_node import BinaryNode
+from node import Node, null
+from tree import Tree
 
 
 class BinaryTree(Tree):
@@ -105,9 +106,23 @@ class BinaryTree(Tree):
             bool: True of the item is found, False otherwise.
 
         """
-        # TODO: Add your code here
-        raise exceptions.MethodNotYetImplemented(
-            "BinaryTree.contains not yet implemented!")
+        """Check if this binary tree contains an item."""
+
+        # Helper function to recursively search for an item in the tree.
+        def _contains(node: BinaryNode, item: int) -> bool:
+            # If we reach a null node, the item is not in that subtree.
+            if node.is_null_node():
+                return False
+            # If the current node's data is the item, we found it.
+            if node.data == item:
+                return True
+            # Check left and right subtrees for the item.
+            return _contains(node.left, item) or _contains(node.right, item)
+
+        # Edge case: empty tree.
+        if self.is_empty():
+            return False
+        return _contains(self.root, item)
 
     @override
     def has_search_property(self) -> bool:
@@ -116,6 +131,24 @@ class BinaryTree(Tree):
         Returns: bool
            False for a generic tree like this one.
         """
-        # TODO: Add your code here
-        raise exceptions.MethodNotYetImplemented(
-            "BinaryTree.has_search_property not yet implemented!")
+        """Check if this binary tree has the search property (BST)."""
+
+        # Helper function to recursively check if the tree has the search property.
+        def _is_bst(node: BinaryNode, min_val: int, max_val: int) -> bool:
+            # If we reach a null node, we have a valid BST.
+            if node.is_null_node():
+                return True
+            # If the current node's data is not within the bounds, we don't have a BST.
+            if not (min_val < node.data < max_val):
+                return False
+            # We need to check the left and right subtrees with the new bounds.
+            # Settting the new max value to the current node's data and the new
+            # min value to the current node's data for each subtree.
+            return _is_bst(node.left, min_val, node.data) and _is_bst(
+                node.right, node.data, max_val
+            )
+
+        if self.is_empty():
+            return True
+        # Used maxsize to represent positive infinity and negative infinity.
+        return _is_bst(self.root, -maxsize, maxsize)

@@ -13,8 +13,10 @@ integers as their data.
 """
 
 from __future__ import annotations
-import exceptions
+
 from typing import override
+
+import exceptions
 from node import Node
 
 

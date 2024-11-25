@@ -12,9 +12,9 @@ contain integers as their data.
     and CS302 class requirements.
 """
 
-from node import Node, NullNode, null
 from itertools import chain
-import exceptions
+
+from node import Node, NullNode, null
 
 
 class Tree(object):
@@ -51,9 +51,9 @@ class Tree(object):
         Returns: int
             The number of nodes in the tree.
         """
-        # TODO: Add your code here
-        raise exceptions.MethodNotYetImplemented(
-            "Tree.get_size not yet implemented!")
+        if self.is_empty():
+            return 0
+        return self.root.size()
 
     def get_height(self) -> int:
         """Compute the height of the tree.
@@ -61,9 +61,9 @@ class Tree(object):
         Returns: int
            The height of the root of the tree.
         """
-        # TODO: Add your code here
-        raise exceptions.MethodNotYetImplemented(
-            "Tree.get_height not yet implemented!")
+        if self.is_empty():
+            return -1
+        return self.root.height()
 
     def has_search_property(self) -> bool:
         """Check if this tree has the search property.
@@ -104,9 +104,7 @@ class Tree(object):
             return ""
         blanks = " " * (level * 2)
         identifer = f"node: {node.data}\n"
-        children = [
-            self._str_helper(level + 1, ch) for ch in node.children
-        ]
+        children = [self._str_helper(level + 1, ch) for ch in node.children]
         return "".join(list(chain([blanks, identifer], children)))
 
     def __str__(self) -> str:

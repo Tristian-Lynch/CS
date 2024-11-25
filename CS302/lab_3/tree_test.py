@@ -10,10 +10,11 @@ Test cases for the tree methods from tree.py
     and CS302 class requirements.
 """
 
-from tree import Tree
-from node import Node
-from tree_builder import build_tree_from_json
 import unittest
+
+from node import Node
+from tree import Tree
+from tree_builder import build_tree_from_json
 
 
 class TreeSizeTest(unittest.TestCase):
@@ -107,5 +108,5 @@ class TreeHeightTest(unittest.TestCase):
         self.assertEqual(7, t.get_height())
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main(verbosity=2)

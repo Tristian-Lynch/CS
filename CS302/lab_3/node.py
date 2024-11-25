@@ -13,7 +13,9 @@ integers as their data.
 """
 
 from __future__ import annotations
+
 from typing import override
+
 import exceptions
 
 
@@ -129,9 +131,13 @@ class Node(object):
         Returns: int
             The computed size of the subtree rooted at this node.
         """
-        # TODO: Add your code here
-        raise exceptions.MethodNotYetImplemented(
-            "Node.size not yet implemented!")
+        # If the node is a null node, return 0
+        if self.is_null_node():
+            return 0
+        # Otherwise, return 1 plus the sum of the sizes of the children.
+        return 1 + sum(
+            child.size() for child in self.children if not child.is_null_node()
+        )
 
     def height(self) -> int:
         """Obtain the height of this node in its current tree.
@@ -139,9 +145,13 @@ class Node(object):
         Returns: int
             The computer height of the node.
         """
-        # TODO: Add your code here
-        raise exceptions.MethodNotYetImplemented(
-            "Node.height not yet implemented!")
+        # If the node is a null node or all of its children are null nodes,
+        if self.is_null_node() or all(child.is_null_node() for child in self.children):
+            return 0
+        # Otherwise, return 1 plus the maximum height of the children
+        return 1 + max(
+            child.height() for child in self.children if not child.is_null_node()
+        )
 
     @override
     def __str__(self) -> str:
@@ -168,15 +178,11 @@ class NullNode(Node):
         Returns: int
             For the null node, this always returns 0.
         """
-        # TODO: Add your code here
-        raise exceptions.MethodNotYetImplemented(
-            "NullNode.size not yet implemented!")
+        return 0
 
     @override
     def height(self) -> int:
-        # TODO: Add your code here
-        raise exceptions.MethodNotYetImplemented(
-            "NullNode.height not yet implemented!")
+        return 0
 
 
 # This module variable is used to designate a null node instead of having to
