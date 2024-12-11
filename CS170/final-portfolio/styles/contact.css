@@ -1,0 +1,70 @@
+.contact-title {
+    font-size: 1.5em;
+}
+
+.contact-info {
+    font-size: 1.5em;
+}
+
+form.contact-form {
+    max-width: 600px;
+    margin: 20px 20px;
+    padding: 20px;
+    border: 1px solid #282c32;
+    border-radius: 10px;
+    background-color: #282c32;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form.contact-form input[type="text"],
+form.contact-form input[type="email"],
+form.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+form.contact-form input[type="submit"] {
+    border-color: #f6ce6d;
+    border: solid 2px #f6ce6d;
+    background-color: transparent;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+    transition: background-color 0.3s ease;
+}
+
+form.contact-form input[type="submit"]:hover {
+    background-color: #f6ce6d;
+}
+
+@media (hover: none) {
+    form.contact-form {
+        margin: 20px auto;
+        font-size: 3em;
+    }
+
+    .contact-title {
+        font-size: 3em;
+    }
+
+    .contact-info {
+        font-size: 3em;
+    }
+
+    form.contact-form input[type="text"],
+    form.contact-form input[type="email"],
+    form.contact-form textarea {
+        font-size: 1em;
+    }
+
+    form.contact-form input[type="submit"] {
+        font-size: 1.5em;
+    }
+}

@@ -1,0 +1,172 @@
+.image {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.image,
+.intro {
+    width: 45%;
+    margin: 0;
+}
+
+.intro {
+    font-size: 1.2em;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 20px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 45%;
+}
+
+.intro p {
+    margin: 0;
+    vertical-align: top;
+    display: inline-block;
+    width: 90%;
+}
+
+.faceshot {
+    width: 95%;
+}
+
+.child {
+    margin: 0 auto;
+}
+
+.btn-div {
+    text-align: left;
+    margin-top: 50px;
+}
+
+.btn {
+    transition: ease-in-out 0.3s;
+    border: solid 2px #f6ce6d;
+    color: #f6ce6d;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-left: 2.5%;
+}
+
+.btn:hover {
+    background-color: #f6ce6d;
+    color: #1e2227;
+}
+
+.about {
+    padding: 20px;
+    width: 100%;
+    display: inline-block;
+}
+
+.about p {
+    margin: 0;
+    font-size: 1.4em;
+    vertical-align: top;
+    display: inline-block;
+    width: 90%;
+}
+
+.wrapper {
+    padding: 20px;
+}
+
+.skills {
+    flex-direction: row;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill {
+    border: 2px solid #1e2227;
+    background-color: #282c32;
+    border-radius: 20px;
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    text-align: center;
+}
+
+.skill img {
+    width: 40%;
+    height: 40%;
+    margin: 10px;
+    display: block;
+    padding-top: 25%;
+    padding-bottom: 5%;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+span.skill-title {
+    font-size: 1.5em;
+}
+
+div.skill {
+    transition: background-color 0.3s ease, transform 0.3s ease,
+        box-shadow 0.3s ease;
+    color: inherit;
+}
+
+div.skill:hover {
+    background-color: #f6ce6d;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries for Responsiveness */
+@media (hover: none) {
+    .intro {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 4em;
+    }
+
+    .about {
+        font-size: 2.5em;
+        padding: 20px;
+    }
+
+    .skills {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    .btn {
+        border-radius: 10px;
+        padding: 15px;
+        font-size: 1em;
+    }
+
+    .image,
+    .intro {
+        width: 90%;
+        margin-bottom: 20px; /* Adds space between stacked elements */
+    }
+}
+
+@media (max-width: 768px) {
+    .intro {
+        font-size: 2em;
+    }
+
+    .about {
+        font-size: 2em;
+        padding: 20px;
+    }
+
+    .btn {
+        border-radius: 10px;
+        font-size: 1.5em;
+    }
+
+    .image,
+    .intro {
+        width: 90%;
+        margin-bottom: 20px; /* Adds space between stacked elements */
+    }
+}

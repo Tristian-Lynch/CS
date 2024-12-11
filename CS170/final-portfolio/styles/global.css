@@ -1,0 +1,131 @@
+/* General Styles */
+body {
+    background-color: #1e2227;
+    color: #d5d5d5;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+}
+
+header:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: linear-gradient(
+        to top,
+        rgba(255, 255, 255, 0),
+        #1e2227 50%
+    );
+    width: 100%;
+    height: 200px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    margin: 50px;
+}
+
+.container-no-top-margin {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ensures wrapping on smaller screens */
+    margin: 0 50px 50px;
+}
+
+/* Header Styles */
+.header-bar {
+    padding: 50px;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.header-bar .icon {
+    padding: 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon img {
+    width: 50px;
+}
+
+/* Navbar Styles */
+.ul-navbar-links {
+    list-style: none;
+    color: #595a5e;
+}
+
+.ul-navbar-links li {
+    display: inline;
+    padding: 0 10px;
+}
+
+.ul-navbar-links li.active {
+    color: #8c8c8c;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+    color: inherit;
+}
+
+a:hover {
+    color: #8c8c8c;
+}
+
+@media (hover: none) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-bar {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Etc */
+.indent {
+    display: inline-block;
+    vertical-align: top;
+    width: 30px;
+    height: 2px;
+    margin-top: 0.5em;
+    background-color: #f6ce6d;
+}
+
+.highlight {
+    color: #f6ce6d;
+    font-size: 1.5em;
+    font-family: "Times New Roman", Times, serif;
+}
+
+.highlight-nosize {
+    color: #f6ce6d;
+}

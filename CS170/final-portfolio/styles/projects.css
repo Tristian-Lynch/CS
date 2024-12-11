@@ -1,0 +1,44 @@
+.class-work {
+    flex-direction: row;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.assignment {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    text-align: center;
+    background-color: #282c32;
+    border: 2px solid #1e2227;
+    border-radius: 20px;
+
+    display: block;
+
+    transition: ease-in-out 0.3s;
+}
+
+.class-title {
+    font-size: 1.5em;
+}
+
+.assignment a img {
+    margin-top: 22.5%;
+    width: 50%;
+    border: solid 2px inherit;
+    border-radius: 25%;
+    margin-bottom: 5px;
+}
+
+span.assignment-title {
+    font-size: 1.25em;
+}
+
+.assignment:hover {
+    background-color: #f6ce6d;
+    color: #1e2227;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
