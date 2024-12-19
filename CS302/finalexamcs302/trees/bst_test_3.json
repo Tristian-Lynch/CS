@@ -1,0 +1,74 @@
+{
+  "tree_name": "bst_10_nodes",
+  "arity": 2,
+  "nodes": [
+    {
+      "data": 50,
+      "children": [
+        {
+          "data": 25,
+          "children": [
+            {
+              "data": 15,
+              "children": [
+                {
+                  "data": 10,
+                  "children": []
+                },
+                {
+                  "data": 20,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "data": 35,
+              "children": [
+                {
+                  "data": 70,
+                  "children": []
+                },
+                {
+                  "data": 40,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": 75,
+          "children": [
+            {
+              "data": 60,
+              "children": [
+                {
+                  "data": 55,
+                  "children": []
+                },
+                {
+                  "data": 65,
+                  "children": []
+                }
+              ]
+            },
+            {
+              "data": 85,
+              "children": [
+                {
+                  "data": 80,
+                  "children": []
+                },
+                {
+                  "data": 90,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

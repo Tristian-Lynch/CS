@@ -1,0 +1,146 @@
+{
+  "tree_name": "large_random_bst",
+  "arity": 2,
+  "nodes": [
+    {
+      "data": 50,
+      "children": [
+        {
+          "data": 25,
+          "children": [
+            {
+              "data": 12,
+              "children": [
+                {
+                  "data": 6,
+                  "children": [
+                    {
+                      "data": 3,
+                      "children": []
+                    },
+                    {
+                      "data": 8,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "data": 18,
+                  "children": [
+                    {
+                      "data": 15,
+                      "children": []
+                    },
+                    {
+                      "data": 20,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "data": 37,
+              "children": [
+                {
+                  "data": 30,
+                  "children": [
+                    {
+                      "data": 28,
+                      "children": []
+                    },
+                    {
+                      "data": 33,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "data": 45,
+                  "children": [
+                    {
+                      "data": 42,
+                      "children": []
+                    },
+                    {
+                      "data": 48,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "data": 75,
+          "children": [
+            {
+              "data": 63,
+              "children": [
+                {
+                  "data": 58,
+                  "children": [
+                    {
+                      "data": 55,
+                      "children": []
+                    },
+                    {
+                      "data": 60,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "data": 68,
+                  "children": [
+                    {
+                      "data": 65,
+                      "children": []
+                    },
+                    {
+                      "data": 70,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "data": 88,
+              "children": [
+                {
+                  "data": 80,
+                  "children": [
+                    {
+                      "data": 78,
+                      "children": []
+                    },
+                    {
+                      "data": 85,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "data": 95,
+                  "children": [
+                    {
+                      "data": 92,
+                      "children": []
+                    },
+                    {
+                      "data": 98,
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
