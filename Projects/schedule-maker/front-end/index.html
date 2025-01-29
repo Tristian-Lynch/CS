@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Schedule Maker</title>
+        <link rel="stylesheet" href="styles/global.css" />
+        <link rel="stylesheet" href="styles/normalize.css" />
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <form>
+                <div class="form-row show">
+                    <input type="text" name="name" placeholder="John" />
+                    <select>
+                        <option value="mcash">Mainline</option>
+                        <option value="csdsk">Customer Service</option>
+                        <option value="hcash">Head Cashier</option>
+                        <option value="gcash">Garden</option>
+                        <option value="lcash">Lumber</option>
+                    </select>
+                    <label for="shift-start">Start Time</label>
+                    <input type="time" name="shift-start" required />
+                    <label for="shift-end">End Time</label>
+                    <input type="time" name="shift-end" required />
+                </div>
+                <button type="button" onclick="addRow()">Add Row</button>
+                <input type="submit" placeholder="Submit" />
+            </form>
+        </main>
+        <script>
+            function addRow() {
+                const form = document.querySelector("form");
+                const row = document.createElement("div");
+                row.classList.add("form-row");
+                row.innerHTML = `
+                    <input type="text" name="name" placeholder="John" />
+                    <select>
+                        <option value="mcash">Mainline</option>
+                        <option value="csdsk">Customer Service</option>
+                        <option value="hcash">Head Cashier</option>
+                        <option value="gcash">Garden</option>
+                        <option value="lcash">Lumber</option>
+                    </select>
+                    <label for="shift-start">Start Time</label>
+                    <input type="time" name="shift-start" />
+                    <label for="shift-end">End Time</label>
+                    <input type="time" name="shift-end" />
+                `;
+                const addButton = form.querySelector('button[type="button"]');
+                form.insertBefore(row, addButton);
+                setTimeout(() => row.classList.add("show"), 10);
+            }
+        </script>
+    </body>
+</html>

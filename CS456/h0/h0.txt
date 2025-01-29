@@ -1,0 +1,24 @@
+ASSIGNMENT h0
+Due Date: Jan 20 at 11:59 PM EST
+Points: 10
+
+In this exercise, we will be demonstrating how to use the handin program on the CS server.
+All assignments in this class will be submitted on the CS Server using this program.
+
+Read the CS wiki for handin or type "man handin" on the command line
+https://cs.indstate.edu/wiki/index.php/Handin
+
+Then edit this file by adding the following
+
+* Name: Tristian Lynch
+* Class Standing: Senior
+
+* I first started programming in high-school when I took Computer Science and AP Computer Science my Junior and Senior years of highschool.
+  Since then I have completed 3 years so far at ISU and graduate this coming fall. I am proficient with C/C++, Java, and Python. Having
+  used Python primarily while I've been in school, Java while I was in highschool, and for personal projects I primarily use C++.
+
+* I am familiar as being accustom to C++ which is C with a much wider feature set.
+
+* I have yet to have a course where we primarily use C as the language for the class so I am excited for that. 
+
+When you are finished editing this file, please submit this assignment to the CS server using handin.
