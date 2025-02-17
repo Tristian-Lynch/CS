@@ -1,0 +1,47 @@
+ASSIGNMENT h2
+Due Date: Feb 2 at 11:59PM EST
+Points: 10
+
+You will be writing a program that returns information about a file.
+
+To do this assignment sucessfully, you need to read the following:
+- man 2 stat
+- man 7 inode
+
+These will have valuable information on how to do some of these things, like
+- the stat structure 
+- what each of these entries in that structure means
+- Macros (in the inode page)
+
+
+I also would like you to write the program so that it'll compile without 
+warnings (i.e. issues that could lead to undesirable behavior in a program). To 
+check to see if your program could result in warnings, compile with the -Wall 
+option enabled.
+
+So for this program, it would look like this
+
+> gcc -Wall -o info info.c
+
+That way, it will show you warnings as well as errors.
+
+
+To set it up so that you won't have to type -Wall every single time, using your 
+favorite text editor (vim, nano, or whatever), on your home directory there is a
+hidden file called .cshrc (assuming you're using tcsh, which most of you are, 
+shells like zsh use .zshrc) open that, and add the following line
+
+alias gcc       'gcc -g -Wall'
+
+Save and exit, then in the home directory, type source .cshrc (if using tcsh) 
+for the settings to take effect immediately. otherwise, these will take effect 
+when you next log in.
+
+To find which shell you are using, run "echo $shell"
+
+the '-Wall' option  will show all warnings, and the '-g' option will enable 
+debugging so we can use programs like gdb to help diagnose issues with your code.
+
+A working version is available in the "test" directory. You will get no points if 
+the program doesn't compile.
+
